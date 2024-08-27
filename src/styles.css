@@ -1,0 +1,474 @@
+body *{
+    margin: 0;
+    padding: 0;
+}
+html{
+    display: flex;
+    justify-items: end;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    width: 100vw;
+    height: 100vh;
+    bottom: 0px;
+    background-color: #a1d1c1;
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* index.html -  Pagina esolha de quantidade de jogadores*/
+
+main{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 35%;
+    top: 0;
+    position: absolute;
+    transform: translateY(-100px);
+}
+
+.logo img{
+    width: 204px;
+    height: 252px;
+}
+
+.title{
+    margin-top: 30px;
+    font-size: 56px;
+    color: #082855;
+}
+
+.subtitle{
+    box-sizing: border-box;
+    width: 253px;
+    margin-top: 20px;
+}
+
+.subtitle p{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.qnt-jgd{
+    width: 293px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 15px;
+}
+
+.qnt-jgd a{
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 43px;
+    border-radius: 5px;
+    border: #082855 solid 1px;
+    font-size: 13px;
+}
+
+#casual{
+    color: #FFFFFF;
+    background-color: #082855;
+}
+
+#melhor-de-cinco{
+    color: #082855;
+}
+
+/* home.hmtl -  Pagina de jogo*/
+
+.container{
+    width: 304px;
+    height: 150px;
+    position: absolute;
+    top: 52px;
+}
+
+.information{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.information .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.name{
+    background-color: #F2651F;
+    border-radius: 20px;
+    width: 132px;
+    height: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+}
+
+.selected-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.point{
+    width: 20px;
+    height: 20px;
+    background-color: #082855;
+    border-radius: 100%;
+}
+
+.player-1 .selected-icon img{
+    position: absolute;
+    transform: rotate(-90deg) scaleY(-1);
+}
+
+
+#player-2 .selected-icon  img{
+    position: absolute;
+    transform: rotate( -90deg);
+}
+
+.bg-botton{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color:#FDF7DD;
+    position: absolute;
+}
+
+.scoreboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 97px ;
+    top: 50%;
+    transform: translateY(-50% );
+}
+
+.scoreboard .score{
+    width: 80px;
+    height: 80px;
+    background-color: #F2651F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #082855;
+    border-radius: 100%;
+    color: #FFFFFF;
+    font-size: 40px;
+}
+
+.versus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    transform: translateY(-500% );
+}
+
+.choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px !important;
+    position: relative;
+    transform: translateY(-60px);
+}
+
+.choice .title{
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.choice-icons{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 28px;
+    margin-top: 20px;
+}
+
+.icon{
+    width: 60px;
+    cursor: pointer;
+}
+
+.selected{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 58px;
+    margin-top: 20px;
+    
+}
+
+.selected div{
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #F2651F;
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    transform: translateY(-40px);
+}
+
+.options .icon{
+    width: 30px;
+}
+
+.loading{
+    width: 12px;
+    height: 12px;
+    transition: linear 0.5s;
+}
+
+.none{
+    display: none !important;
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+#overlay {
+    position: fixed; /* Fixa na tela, cobrindo toda a viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto semi-transparente */
+    z-index: 1; /* Garante que o overlay fique acima do conteúdo */
+}
+
+.modal{
+    position: fixed;
+    top: 50;
+    width: 80%;
+    height: 20%;
+    border: 1px solid #082855;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    background-color: #F2651F;
+    color:white;
+    z-index: 2;
+    position: absolute;
+    top: 40%;
+}
+
+.modal .exit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 1%;
+    top: 2%;
+    border-radius: 5px;
+    z-index: 2;
+}
+.exit:hover{
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+.statistics{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    font-size: 60%;
+    gap: 5px;
+    text-shadow: 
+        1px 1px 0px #082855,  /* Sombra no canto inferior direito */
+        -1px -1px 0px #082855, /* Sombra no canto superior esquerdo */
+        -1px 1px 0px #082855,  /* Sombra no canto inferior esquerdo */
+        1px -1px 0px #082855; 
+}
+
+.statistics .title{
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    color: #FFFFFF;
+}
+
+.statistics div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+}
+/* Reponsividade Tela de computador*/
+@media (min-width:540px) and  (min-width: 1024px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items:center ;
+
+    }
+    main{
+        margin-top: 7%;
+        transform: translateY(-50px);
+    }
+
+    .versus{
+        transform: translateY(-350%);
+    }
+
+    .choice{
+        transform: translateY(-100px);
+    }
+
+    .choice .icon{
+        width: 50px;
+    }
+
+    .options{
+        transform: translateY(-60px);
+    }
+
+    .selected div{
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 20px solid #F2651F;
+    }
+
+    .modal{
+        width: 300px;
+        height: 150px;
+        font-size: 12px;
+        box-sizing: border-box;
+    }
+    .modal .statistics{
+        font-size: 85%;
+    }
+
+    .container .name{
+        margin-bottom: 30px;
+    }
+
+
+    #overlay {
+        position: fixed; /* Fixa na tela, cobrindo toda a viewport */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fundo preto semi-transparente */
+        z-index: 1; /* Garante que o overlay fique acima do conteúdo */
+}
+
+}
+
+@media ( min-width: 1600px){
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items:center ;
+
+    }
+    main{
+        margin-top: 7%;
+        transform: translateY(0px);
+    }
+
+    .versus{
+        transform: translateY(-550%) !;
+    }
+
+    .choice{
+        transform: translateY(-70px);
+    }
+
+    .choice .icon{
+        width: 60px;
+    }
+
+    .options{
+        transform: translateY(-40px);
+    }
+
+    .selected div{
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 30px solid #F2651F;
+    }
+
+    .modal{
+        width: 300px;
+        height: 170px;
+        font-size: 13px;
+        box-sizing: border-box;
+    }
+    .modal .statistics{
+        font-size: 85%;
+    }
+
+    .container .name{
+        margin-bottom: 30px;
+    }
+
+
+    #overlay {
+        position: fixed; /* Fixa na tela, cobrindo toda a viewport */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fundo preto semi-transparente */
+        z-index: 1; /* Garante que o overlay fique acima do conteúdo */
+}
+
+
+}
+
+

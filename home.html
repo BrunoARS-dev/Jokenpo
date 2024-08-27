@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Matemasie&family=Press+Start+2P&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokenpô</title>
+    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="icon" href="./src/img/pedra-papel-tesoura.png" type="image/x-icon">
+</head>
+<body>
+    <div id="overlay" class="none"></div>
+
+    <main>
+        <div class="container">
+            <div class="information">
+                <div class="box player-1">
+                    <div class="name">
+                        <span>
+                            Você
+                        </span>
+                    </div>
+                    <div class="selected-icon">
+                        <div class="point" ></div>
+                        <div class="point" ></div>
+                        <div class="point" ></div>
+                        <img class="icon none" src="./src/img/paper.svg" alt="">
+                    </div>
+                </div>
+                <div id="player-2" class="box">
+                    <div class="name">
+                        <span>
+                            cpu
+                        </span>
+                    </div>
+                    <div class="selected-icon">
+                        <div class="point "></div>
+                        <div class="point" ></div>
+                        <div class="point" ></div>
+                        <img class="icon none" src="./src/img/paper.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+    </main>
+    
+    <div class="bg-botton">
+        <div class="scoreboard">
+            <div id="score-p1" class="score">
+                <span>0</span>
+            </div>
+            <div id="score-p2" class="score">
+                <span>0</span>
+            </div>
+        </div>
+        <div class="versus">
+            <img src="./src/img/versus.svg" alt="imagem versus">
+        </div>
+        <div class="choice">
+            <div class="subtitle none">
+                <p>Jogador 1</p>
+            </div>
+            <div class="title">
+                <span>ESCOLHA</span>
+            </div>
+            <div class="choice-icons" >
+                <img class="icon" id="rock" onclick="jokenpo(this)" src="./src/img/rock.svg" alt="">
+                <img class="icon" id="paper" onclick="jokenpo(this)" src="./src/img/paper.svg" alt="">
+                <img class="icon" id="scissors" onclick="jokenpo(this)" src="./src/img/scissors.svg" alt="">
+            </div>
+            <div class="selected" >
+                <div class="selected-rock invisible"></div>
+                <div class="selected-paper invisible"></div>
+                <div class="selected-scissors invisible"></div>
+            </div>
+        </div>
+        <div class="options">
+            <img class="icon" onclick="resetGame()" src="./src/img/refresh-outline.svg" alt="">
+            <img class="icon" onclick="abrirModal()" src="./src/img/settings.svg" alt="">
+        </div>
+    </div>
+
+
+    <div class="modal none">
+
+        <div class="statistics">
+            <span class="title">Estatisticas</span>
+            <div id="partidas">
+                <p>Total de partidas:</p> 
+                <span>00</span>
+            </div>
+            <div id="vitorias">
+                <p>percentual de vitórias:</p> 
+                <span>0%</span>
+            </div>
+            <div id="derrotas">
+                <p>percentual de derrotas:</p> 
+                <span>0%</span>
+            </div>
+            <div id="empates">
+                <p>percentual de empates:</p> 
+                <span>0%</span>
+            </div>
+
+        </div>
+
+        <div class="exit" onclick="fecharModal()">
+            <img class="icon" src="./src/img/x.svg" alt="Botão para fechar o modal">
+        </div>
+
+   </div>
+
+    <script src="./src/script.js"></script>
+</body>
+</html>

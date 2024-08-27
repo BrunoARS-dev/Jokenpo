@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Matemasie&family=Press+Start+2P&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokenpô</title>
+    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="icon" href="./src/img/pedra-papel-tesoura.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        
+        <div class="logo" onclick="definirModoDeJogo(this)">
+            <img src="./src/img/jokenpo-logo.svg" alt="">
+        </div>
+        <div class="title">
+            <span>JOKENPÔ</span>
+        </div>
+        <div class="subtitle">
+            <p>ESCOLHA A QUANTIDADE
+                DE JOGADORES:</p>
+        </div>
+        <div class="qnt-jgd">
+            <a id="casual" onclick="definirModoDeJogo('casual')" href="./home.html">Casual</a>
+            <a id="melhor-de-cinco" onclick="definirModoDeJogo('melhor-de-cinco')" href="./home.html">Melhor de 5</a>
+        </div>
+    </main>
+    <script src="./src/script.js"></script>
+</body>
+</html>
