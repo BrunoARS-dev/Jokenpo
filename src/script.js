@@ -193,7 +193,7 @@ function fecharModal(){
     contJogador2 = 0 
     totalPartidas = 0
     totalEmpates = 0
-    
+    contadorPartidas = 0
 
     partidas.innerHTML = 0
     empates.innerHTML = 0 + '%'
